@@ -15,8 +15,8 @@ function Person(firstName, lastName, email, address) {
 // Creates a customer
 function Customer(firstName, lastName, email, address) {
 	Person.call(this, firstName, lastName, email, address);
-	this.status = cusStatus.SUSPENDED;
-	this.sendConfirmationEmail();
+	//this.status = cusStatus.SUSPENDED;
+	//this.sendConfirmationEmail();
 }
 
 // Define Enumeration for customer status
@@ -129,15 +129,29 @@ function Location (latitude, longitude) {
 }
 
 // Testfunctions
-//Person.prototype.sayHello1 = function(name) {
-//	console.log("Hello, I'm person " +this.firstName);
-//}
-//Customer.prototype.sayHello = function(name) {
-//	console.log("Hello, I'm customer " + this.firstName + " " + this.id);
-//}
+Person.prototype.sayHello1 = function(name) {
+	console.log("Hello, I'm person " +this.firstName);
+}
+
+Customer.prototype.sayHello = function(name) {
+	return "Hello, I'm customer "  + this.firstName;
+}
+
+function reserveCar2() {
+	var customer1 = new Customer("FirstName", "LastName", "email", "address");
+	document.getElementById("demo").innerHTML = customer1.sayHello();
+	
+	//window.location = 'directionToCar.html'; 
+	if (customer1.checkPrevisousBill == true) {
+		window.location = 'directionToCar.html'; 
+	}
+	else {
+		window.location = 'payBill.html';
+	}
+}
 // Testcreations
 //var customer1 = new Customer("Jenny", "Hendler", "bla", "bla");
-//customer1.sayHello();
+//console.log(customer1.sayHello());
 //customer1.firstName = "Neu";
 //customer1.sayHello();
 //console.log(customer1 instanceof Person);
