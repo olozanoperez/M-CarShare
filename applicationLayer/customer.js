@@ -26,6 +26,7 @@ Customer.prototype.sendConfirmationEmail = function() {
 	 * Implement sending of confirmation mail
 	 */
 	console.log("Send mail to: " + this.email);
+	return "Send mail to: " + this.email;
 }
 
 // Verifies the customer's mailadress and sets his/her status to active
@@ -37,9 +38,17 @@ Customer.prototype.customerVerified = function() {
 // Testfunction
 Customer.prototype.sayHello = function(name) {
 	console.log("Hello, I'm " + this.firstName + " " + this.id);
+	return ("Hello, I'm " + this.firstName + " " + this.id);
 }
 
 var customer1 = new Customer ("Jenny", "Hendler", "bla", "bla");
 customer1.sayHello("Hello");
 customer1.checkPreviousBill();
 customer1.customerVerified();
+var customer2 = new Customer ("Oscar", "Lozano", "dasda@hotmail.com", "asdasa");
+function myFunction() {
+	document.getElementById("demo").innerHTML = customer2.sendConfirmationEmail();
+	setTimeout(function(){
+	       window.location='directionToCar.html';
+	    }, 5000);
+	}
