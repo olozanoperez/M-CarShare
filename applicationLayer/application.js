@@ -1,4 +1,4 @@
-// ----------------------------------- Person ---------------------------------------------------
+// ------------ Person ------------
 // Creates a person
 function Person(firstName, lastName, email, address) {
 	this.firstName = firstName;
@@ -11,8 +11,7 @@ function Person(firstName, lastName, email, address) {
 	this.id = 1;
 }
 
-// ----------------------------------- Customer
-// ---------------------------------------------------
+// ------------ Customer ------------
 // Creates a customer
 function Customer(firstName, lastName, email, address) {
 	Person.call(this, firstName, lastName, email, address);
@@ -51,8 +50,7 @@ Customer.prototype.customerVerified = function() {
 	console.log("Customer status: " + this.status);
 }
 
-// ----------------------------------- Car
-// ---------------------------------------------------
+// ------------ Car ------------
 // Creates a car
 function Car(plate, brand, model, color, year, carClass, status, kmCost, timeCost, creator, picture, location, description, category) {
 	this.plate = plate;
@@ -121,8 +119,7 @@ Car.prototype.calculateDistance = function(latitude, longitude) {
 	return dis;
 }
 
-// ----------------------------------- Location
-// ---------------------------------------------------
+// ------------ Location ------------
 // Creates a location
 function Location (latitude, longitude) {
 	this.latitude = latitude;
@@ -130,26 +127,26 @@ function Location (latitude, longitude) {
 }
 
 // Testfunctions
-Person.prototype.sayHello1 = function(name) {
-	console.log("Hello, I'm person " +this.firstName);
-}
-Customer.prototype.sayHello = function(name) {
-	console.log("Hello, I'm customer " + this.firstName + " " + this.id);
-}
+//Person.prototype.sayHello1 = function(name) {
+//	console.log("Hello, I'm person " +this.firstName);
+//}
+//Customer.prototype.sayHello = function(name) {
+//	console.log("Hello, I'm customer " + this.firstName + " " + this.id);
+//}
 // Testcreations
-var customer1 = new Customer("Jenny", "Hendler", "bla", "bla");
-customer1.sayHello();
-customer1.firstName = "Neu";
-customer1.sayHello();
-console.log(customer1 instanceof Person);
-console.log(customer1 instanceof Customer);
-customer1.sayHello1();
-console.log(customer1.firstName);
-var person1 = new Person("Person", "Mueller", "bla", "bla");
-person1.sayHello1();
-console.log(customer1.status);
-customer1.customerVerified();
-console.log(customer1.status);
+//var customer1 = new Customer("Jenny", "Hendler", "bla", "bla");
+//customer1.sayHello();
+//customer1.firstName = "Neu";
+//customer1.sayHello();
+//console.log(customer1 instanceof Person);
+//console.log(customer1 instanceof Customer);
+//customer1.sayHello1();
+//console.log(customer1.firstName);
+//var person1 = new Person("Person", "Mueller", "bla", "bla");
+//person1.sayHello1();
+//console.log(customer1.status);
+//customer1.customerVerified();
+//console.log(customer1.status);
 // var location1 = new Location(100, 200);
 // var car1 = new Car("Plate", location1);
 // console.log(location1);
