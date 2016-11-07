@@ -42,12 +42,14 @@ Customer.prototype.sendConfirmationEmail = function() {
 	 * TODO Implement sending of confirmation mail
 	 */
 	console.log("Send mail to: " + this.email);
+	return "Send mail to: " + this.email;
 }
 
 // Verifies the customer's mailadress and sets his/her status to active
 Customer.prototype.customerVerified = function() {
 	this.status = cusStatus.ACTIVE;
 	console.log("Customer status: " + this.status);
+	return "Customer status: " + this.status;
 }
 
 // ------------ Car ------------
