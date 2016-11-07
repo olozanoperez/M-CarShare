@@ -1,26 +1,40 @@
+// Create a new customer with all attributes given
 var Customer = function(firstName, lastName, email, address) {
 	this.firstName = firstName;
 	this.lastName = lastName;
 	this.email = email;
 	this.address = address;
+	/** TODO
+	 * create proper ID automatically
+	 */
 	this.id = 1;
 	this.status = "suspended";
 	this.sendConfirmationEmail();
 };
 
+// Check, if the previous bill of the customer was paid
 Customer.prototype.checkPreviousBill = function(){
+	/** TODO
+	 * Implement check of previous bill
+	 */
 	return true;
 };
 
+// Send a email so the customer can confirm his/her mailaddress
 Customer.prototype.sendConfirmationEmail = function() {
+	/** TODO
+	 * Implement sending of confirmation mail
+	 */
 	console.log("Send mail to: " + this.email);
 }
 
+// Verifies the customer's mailadress and sets his/her status to active
 Customer.prototype.customerVerified = function() {
 	this.status = "active";
 	console.log("Customer status: " + this.status);
 }
 
+// Testfunction
 Customer.prototype.sayHello = function(name) {
 	console.log("Hello, I'm " + this.firstName + " " + this.id);
 }
