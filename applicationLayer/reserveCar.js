@@ -4,7 +4,6 @@ function reserveCar() {
 //	If the user has paid the previous Bill then he is directed to the directions page, otherwise
 //	it has to pay the previous bill
 	if (customer1.checkPreviousBill() == true) {
-		
 		window.location = 'directionToCar.html'; 
 	}
 	else {

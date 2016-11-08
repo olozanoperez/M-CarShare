@@ -56,18 +56,18 @@ Customer.prototype.customerVerified = function() {
 // Creates a car
 function Car(plate, brand, model, color, year, carClass, status, kmCost, timeCost, creator, picture, location, description, category) {
 	this.plate = plate;
-// this.brand = brand;
-// this.model = model;
-// this.color= color;
-// this.year = year;
-// this.carClass = carClass;
-// this.status = status;
-// this.kmCost = kmCost;
-// this.timeCost = timeCost;
-// this.creator = creator;
-// this.picture = picture;
+	this.brand = brand;
+	this.model = model;
+	this.color= color;
+	this.year = year;
+	this.carClass = carClass;
+	this.status = status;
+	this.kmCost = kmCost;
+	this.timeCost = timeCost;
+	this.creator = creator;
+	this.picture = picture;
 	this.location = location;
-	// this.description = description;
+	this.description = description;
 	this.status = carStatus.available;
 }
 
@@ -104,14 +104,15 @@ var carCategory = {
 	VAN: "van",
 	LUXURY: "luxury"
 }
-/*Check functions. When uncommited they will make the problem break
+
 // Calculate costs for km and hours driven
 Car.prototype.getCosts = function(kmDriven, hoursDriven) {
-	var kmCost = kmDriven * kmCost;
-	var timeCost = hoursDriven * timeCost;
-	var costs = {kmCost, timeCost};
-	//return costs;
+	var kmCostCur = kmDriven * this.kmCost;
+	var timeCostCur = hoursDriven * this.timeCost;
+	var costs = [kmCostCur, timeCostCur];
+	return costs;
 }
+
 
 // Calculate air distance of car from given point via latitude and longitude
 Car.prototype.calculateDistance = function(latitude, longitude) {
@@ -120,7 +121,8 @@ Car.prototype.calculateDistance = function(latitude, longitude) {
 	var dis = Math.sqrt(disLat + disLon);
 	return dis;
 }
-*/
+
+
 // ------------ Location ------------
 // Creates a location
 function Location (latitude, longitude) {
