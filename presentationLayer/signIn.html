@@ -49,11 +49,14 @@
 												<h2><font color="white">Sign in</font></h2>
 												<h3><font color="white">Use your M-CarShare account</font></h3>
 											</header>
-											<fieldset>
-												 <input type="text"	id="username" name="username" placeholder="Enter the username:" /><br />
-												<input type="password"	id="password" name="password" placeholder="Enter the password:" /><br />
-												<a href="findCar.html"><img src="images/signIn.jpg"></a>
-											</fieldset>
+											<form action="signIn" method = "post">
+ 												<fieldset>
+												 	<input type="text"	id="username" name="username" placeholder="Enter the username:" /><br />
+													<input type="password"	id="password" name="password" placeholder="Enter the password:" /><br />
+													<input type="submit" value="submit"/>
+<!-- 													<a href="findCar.html"><img src="images/signIn.jpg"></a> -->
+												</fieldset>
+											</form>
 											<br />
 												<h3><font color="white">No Account?<a href="registerNewUser.html">Create One!</a></font></h3>
 										</section>

@@ -17,6 +17,7 @@ function Customer(firstName, lastName, email, address) {
 	Person.call(this, firstName, lastName, email, address);
 	//this.status = cusStatus.SUSPENDED;
 	//this.sendConfirmationEmail();
+	module.exports = Customer;
 }
 
 // Define Enumeration for customer status
@@ -54,13 +55,13 @@ Customer.prototype.customerVerified = function() {
 
 // ------------ Car ------------
 // Creates a car
-function Car(plate, brand, model, color, year, carClass, status, kmCost, timeCost, creator, picture, location, description, category) {
+function Car(plate, brand, model, color, year, category, status, kmCost, timeCost, creator, picture, location, description, category) {
 	this.plate = plate;
 	this.brand = brand;
 	this.model = model;
 	this.color= color;
 	this.year = year;
-	this.carClass = carClass;
+	this.category = category;
 	this.status = status;
 	this.kmCost = kmCost;
 	this.timeCost = timeCost;
