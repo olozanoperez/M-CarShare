@@ -1,6 +1,6 @@
 function reserveCar() {
 	var customer1 = new Customer("Jenny", "Hendler", "bla", "bla");
-
+	window.location= 'directionToCar.html';
 	// If the user has paid the previous Bill then he is directed to the
 	// directions page, otherwise
 	// it has to pay the previous bill
