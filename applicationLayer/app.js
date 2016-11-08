@@ -113,15 +113,29 @@ app.post("/signIn", function(req, res) {
 			res.send("Invalid Username or Password.");
 		}
 	})
-})
+});
 
-app.post("/reserveCar", function(req, res) {
-	var customer1 = new Customer("Jenny", "Hendler", "bla", "bla");
-	if (customer1.checkPreviousBill() == true) {
-		window.location = 'directionToCar.html';
-	} else {
-		window.location = 'payBill.html';
-	}
-})
+app.get('/carDetails.html', function(req,res) {
+	res.sendfile('./presentationLayer/findCar.html');
+});
+	
+//app.post("/carDetails", function(req, res) {
+//	res.sendfile('./' + "presentationLayer/directionToCar.html");
+////	var customer1 = new Customer("Jenny", "Hendler", "bla", "bla");
+////	if (customer1.checkPreviousBill() == true) {
+////		res.sendfile('./' + "presentationLayer/directionToCar.html");
+////		//window.location = 'directionToCar.html';
+////	} else {
+////		res.sendfile('./' + "presentationLayer/payBill.html");
+////		//window.location = 'payBill.html';
+////	}
+//});
+
+//app.post('/carDetails', function(req, res) {
+//	  // Your logic and then redirect
+//	  res.redirect('/index.html');
+//	});
+
+
 
 http.createServer(app).listen(8888);

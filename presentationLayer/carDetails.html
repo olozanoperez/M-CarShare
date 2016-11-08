@@ -10,6 +10,21 @@
 <script src="../applicationLayer/application.js"></script>
 <script src="../applicationLayer/reserveCar.js"></script>
 <!-- 		<script src="../applicationLayer/test.js"></script> -->
+<script>
+    function reserveCar() {
+    	document.location="./carDetails.html";
+//     	var customer1 = new Customer("Jenny", "Hendler", "bla", "bla");
+
+//     	// If the user has paid the previous Bill then he is directed to the
+//     	// directions page, otherwise
+//     	// it has to pay the previous bill
+//     	if (customer1.checkPreviousBill() == true) {
+//             document.location="./carDetails.html";
+//         }
+//     	else{
+//     		document.location='./payBill.html';
+}
+</script>
 
 </head>
 <body class="subpage">
@@ -83,12 +98,15 @@
 								<!--<p><a href="directionToCar.html"><img src="images/button.jpg"></p>-->
 
 
-								<p id="demo">A Paragraph.</p>
+<!-- 								<p id="demo">A Paragraph.</p> -->
 
-								<form action='\carDetails.html' method='post'>
-									<input type="submit" value="Rent" />
-								</form>
-								<!-- 										<button type="button" onclick="reserveCar()">Rent</button>											 -->
+<!-- 								<form action='/carDetails.html' method='post'> -->
+<!-- 								<fieldset> -->
+<!-- 												 <input type="text"	id="firstName" name="firstName" placeholder="First Name:" /><br /> -->
+<!-- 									<input type="submit" value="Rent" /> -->
+<!-- 									</fieldset> -->
+<!-- 								</form> -->
+								<button type="button" onclick="reserveCar()">Rent</button>											
 							</section>
 						</div>
 					</div>
