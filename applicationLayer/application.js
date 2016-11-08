@@ -41,7 +41,7 @@ Customer.prototype.sendConfirmationEmail = function() {
 	/**
 	 * TODO Implement sending of confirmation mail
 	 */
-	console.log("Send mail to: " + this.email);
+	//console.log("Send mail to: " + this.email);
 	return "Send mail to: " + this.email;
 }
 
@@ -104,13 +104,13 @@ var carCategory = {
 	VAN: "van",
 	LUXURY: "luxury"
 }
-
+/*Check functions. When uncommited they will make the problem break
 // Calculate costs for km and hours driven
 Car.prototype.getCosts = function(kmDriven, hoursDriven) {
 	var kmCost = kmDriven * kmCost;
 	var timeCost = hoursDriven * timeCost;
 	var costs = {kmCost, timeCost};
-	return costs;
+	//return costs;
 }
 
 // Calculate air distance of car from given point via latitude and longitude
@@ -120,7 +120,7 @@ Car.prototype.calculateDistance = function(latitude, longitude) {
 	var dis = Math.sqrt(disLat + disLon);
 	return dis;
 }
-
+*/
 // ------------ Location ------------
 // Creates a location
 function Location (latitude, longitude) {
@@ -128,28 +128,16 @@ function Location (latitude, longitude) {
 	this.longitude = longitude;
 }
 
+
 // Testfunctions
-Person.prototype.sayHello1 = function(name) {
-	console.log("Hello, I'm person " +this.firstName);
-}
-
-Customer.prototype.sayHello = function(name) {
-	return "Hello, I'm customer "  + this.firstName;
-}
-
-function reserveCar2() {
-	var customer1 = new Customer("FirstName", "LastName", "email", "address");
-	document.getElementById("demo").innerHTML = customer1.sayHello();
-	
-	//window.location = 'directionToCar.html'; 
-	if (customer1.checkPrevisousBill == true) {
-		window.location = 'directionToCar.html'; 
+//Person.prototype.sayHello1 = function(name) {
+//	console.log("Hello, I'm person " +this.firstName);
+//}
+//
+	Customer.prototype.sayHello = function() {
+		return "Hello, I'm customer "  + this.firstName;
 	}
-	else {
-		window.location = 'payBill.html';
-	}
-}
-// Testcreations
+//// Testcreations
 //var customer1 = new Customer("Jenny", "Hendler", "bla", "bla");
 //console.log(customer1.sayHello());
 //customer1.firstName = "Neu";
